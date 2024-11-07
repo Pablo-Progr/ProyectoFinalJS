@@ -1,0 +1,4 @@
+{
+    "usuarios": ["admin", "adminMayorista"],
+    "contraseña": ["1234", "5678"]
+}
