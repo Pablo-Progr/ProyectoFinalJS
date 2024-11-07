@@ -64,6 +64,14 @@ h2{
 .card{
     border: 2px solid #bca471;
     box-shadow: 3px 3px 5px rgb(0, 0, 0);
+    
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+
 }
 
 .card-body{
