@@ -1,0 +1,45 @@
+.container-cards{
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card{
+    border: 2px solid #bca471;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0);
+    
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+
+}
+
+.card-body{
+    color: aliceblue;
+    background-color: black;
+    text-align: center;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.card-img{
+    width: 285,6px;
+    height: 285px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.boton-adm{
+    display: flex;
+    justify-content: center
+}
+
+.btn{
+    background-color: black;
+    color: aliceblue
+}
+
+.modal-content{
+    background-color: #bca471;
+}
