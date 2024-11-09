@@ -1,3 +1,29 @@
-.table{
-    background-color: #bca471;
+
+
+.tabla-personalizada{
+    width: 100%;
+    text-align: center;
+    color: aliceblue;
+}
+
+.iconos{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    border-radius: 5px;
+    margin: 0px 5px;
+}
+
+.icono-mirar{
+    background-color: rgb(5, 194, 5);
+}
+
+.icono-editar{
+    background-color:  yellow;
+}
+
+.icono-eliminar{
+    background-color: red;
 }
