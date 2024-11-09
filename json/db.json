@@ -6,6 +6,18 @@
       "contraseña": "123",
       "confirmarContraseña": "123",
       "id": "395a"
+    },
+    {
+      "id": "3cf9",
+      "nombre": "giuliano123",
+      "email": "giuliano@123.com",
+      "contraseña": "1234"
+    },
+    {
+      "id": "8a0e",
+      "nombre": "Emir",
+      "email": "emirjorge.8@gmail.com",
+      "contraseña": "emir123"
     }
   ]
 }

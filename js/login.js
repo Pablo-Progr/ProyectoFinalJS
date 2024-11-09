@@ -77,11 +77,45 @@ formularioRegistro.reset();
 
 BotonInicioSesion.addEventListener ("click",async (e) => {
     e.preventDefault();
-    
+
+    let EmailLogin=document.getElementById("emailLogin").value;
+    let ContraseñaLogin=document.getElementById("contraseñaLogin").value;
+
+    if (EmailLogin&&ContraseñaLogin) {
+        try {
+
+            let response = await axios.get("http://localhost:3000/usuarios");
+
+            let usuarios=response.data;
+
+            let usuarioEncontrado = false;
 
 
+            usuarios.forEach((usuario)=>{
+                if (usuario.email===EmailLogin && usuario.contraseña===ContraseñaLogin) {
+                    usuarioEncontrado=true;
+                }
+            });
+
+            if(usuarioEncontrado===true){
+                alert("Inicio de sesion correcto")
+                window.location.href ="productos.html";
+
+            }else{
+                alert("Email o contraseña incorrectos")
+            }
 
 
+       
+        } catch (error) {
+            console.error("Error al iniciar sesion, intetalo de nuevo, error: ",error);
+            alert("Error al iniciar sesion, intentalo de nuevo")
+            
+        }
+        
+    }else{
+        alert("Por favor rellene todos los campos")
+    }
 
 })
 
