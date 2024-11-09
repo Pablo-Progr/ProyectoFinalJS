@@ -40,3 +40,12 @@
   .P a:hover{
     color: lightgreen;
   }
+  #BotonCrearCuenta{
+    margin: 10px;
+    transition: transform 0.3s ease;
+    background-color: rgb(234, 234, 234);
+    color: black;
+  }
+  #BotonCrearCuenta:hover{
+    background-color: lightgreen;
+  }
