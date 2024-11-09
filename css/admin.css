@@ -1,4 +1,26 @@
+.container-form{
+    display: flex;
+    justify-content: center;
+}
 
+form{
+    width: 50%;
+    color: #bca471;
+}
+
+.ubicacion-boton{
+    justify-content: center;
+}
+
+.boton{
+    margin: 4px;
+    background-color: #bca471;
+}
+
+.boton:hover{
+    color: black;
+    background-color: green;
+}
 
 .tabla-personalizada{
     width: 100%;

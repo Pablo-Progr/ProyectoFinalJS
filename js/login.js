@@ -32,7 +32,6 @@ let Email = document.getElementById("emailRegistro").value;
 let Contraseña = document.getElementById("contraseñaRegistro").value
 let ConfirmarContraseña = document.getElementById("confirmarContraseñaRegistro").value
 
-alert("guardando datos")
 
 formularioRegistro.reset();
 
@@ -50,7 +49,12 @@ formularioRegistro.reset();
                       
                     })
                     console.log(response);
-                    alert("Usuario creado correctamente")
+                    Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Your work has been saved",
+                    timer: 50000
+                    });
                 
             } catch (error) {
                 alert("Error")

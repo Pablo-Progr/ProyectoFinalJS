@@ -6,29 +6,6 @@
       "contraseña": "123",
       "confirmarContraseña": "123",
       "id": "395a"
-    },
-    {
-      "nombre": "admin2",
-      "id": "1dd4"
-    },
-    {
-      "id": "ad8b",
-      "nombre": "Emir",
-      "email": "emirjorge.8@gmail.com",
-      "contraseña": "1234",
-      "confirmarContraseña": "1234"
-    },
-    {
-      "id": "6676",
-      "nombre": "giulianogay",
-      "email": "GiulianoGay.com",
-      "contraseña": "1234"
-    },
-    {
-      "id": "f051",
-      "nombre": "giulianoselacome1234",
-      "email": "giuliano@gmail.com",
-      "contraseña": "12345"
     }
   ]
 }

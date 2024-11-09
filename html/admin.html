@@ -50,9 +50,29 @@
         </nav>
     </header>
     <main>
-      <section class="container">
-        <h2>Administracion de productos</h2>
-
+      <h2>Administracion de productos</h2>
+      <section class="container container-form">
+          <form id="formularioLogin">
+            <div class="form-group">
+              <label class="mb-1" for="exampleInputEmail1">Marca</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Marca del producto">
+            </div>
+            <div class="form-group">
+              <label class="mt-1 mb-1" for="exampleInputPassword1">Nombre del producto</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Nombre del Producto">
+            </div>
+            <div class="form-group">
+              <label class="mt-1 mb-1" for="exampleInputPassword1">Tamaño</label>
+              <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nombre del Producto">
+            </div>
+            <div class="form-group">
+              <label class="mt-1 mb-1" for="exampleInputPassword1">Precio</label>
+              <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Nombre del Producto">
+            </div>
+            <div class="ubicacion-boton d-flex">
+              <button  type="submit" class="btn boton">Agregar Producto</button>
+            </div>
+          </form>
       </section>
       <section class="container seccion-tabla mt-3">
         <table class=" table table-dark tabla-personalizada">
