@@ -28,12 +28,31 @@ enlaceLogin.addEventListener("click",(e)=>{
 BotonCrearCuenta.addEventListener  ("click", async (e)=>{
     e.preventDefault();
 let Nombre = document.getElementById("nombreRegistro").value;
+let Apellido = document.getElementById("apellidoRegistro").value;
+let FechaNac = document.getElementById("fechaRegistro").value;
+let Dni = document.getElementById("dniRegistro").value;
 let Email = document.getElementById("emailRegistro").value;
 let Contraseña = document.getElementById("contraseñaRegistro").value
 let ConfirmarContraseña = document.getElementById("confirmarContraseñaRegistro").value
 
 
 formularioRegistro.reset();
+
+// Validacion para saber si es mayor de edad
+
+    let fechaActual = new Date();
+    let fechaNacimiento = new Date(FechaNac);
+    let edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+    let mes = fechaActual.getMonth() - fechaNacimiento.getMonth();
+
+    if (mes<0 || (mes === 0 && fechaActual.getDate()< fechaNacimiento.getDate())) {
+        edad=edad-1;
+    }
+
+    if (edad<18) {
+        alert("Debe ser mayor de edad para registrarse");
+        return;
+    }
 
 // if para dar error si ponen contraseñas iguales o no ingresan todos los datos
 
@@ -44,6 +63,9 @@ formularioRegistro.reset();
                 let response = await axios.post("http://localhost:3000/usuarios",{
                 
                     nombre: Nombre,
+                    apellido: Apellido,
+                    fechaNacimiento: FechaNac,
+                    dni: Dni,
                     email : Email,
                     contraseña: Contraseña,
                       
