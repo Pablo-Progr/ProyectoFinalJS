@@ -18,6 +18,15 @@
       "nombre": "Emir",
       "email": "emirjorge.8@gmail.com",
       "contraseña": "emir123"
+    },
+    {
+      "id": "3e92",
+      "nombre": "Leandro Gustavo",
+      "apellido": "Jorge",
+      "fechaNacimiento": "2002-02-22",
+      "dni": "40698625",
+      "email": "leandro@gmail.com",
+      "contraseña": "leandro123"
     }
   ]
 }
