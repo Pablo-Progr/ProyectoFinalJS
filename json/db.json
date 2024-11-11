@@ -27,6 +27,24 @@
       "dni": "40698625",
       "email": "leandro@gmail.com",
       "contraseña": "leandro123"
+    },
+    {
+      "id": "9bac",
+      "nombre": "Giuliana",
+      "apellido": "Valdez",
+      "fechaNacimiento": "2004-06-20",
+      "dni": "45330197",
+      "email": "giulivaldez.8@gmail.com",
+      "contraseña": "1234"
+    },
+    {
+      "id": "ec0b",
+      "nombre": "Emir",
+      "apellido": "1¿jorge",
+      "fechaNacimiento": "2006-02-02",
+      "dni": "44582822",
+      "email": "emirjorge.8@gmail.com",
+      "contraseña": "1234"
     }
   ]
 }
