@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/admin.css">
+    <script src="../js/admin.js" defer></script>
     <title>Admin</title>
 </head>
 <body>
@@ -32,10 +33,6 @@
                   <a class="nav-link links-navbar" href="sobreNosotros.html">Nosotros</a>
                 </li>
               </ul>
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
-              </form>
               <div class="carrito-compra">
                   <a href="carrito.html" style="text-decoration:none; color: aliceblue;">
                       <div class="badge">0</div>
@@ -52,25 +49,34 @@
     <main>
       <h2>Administracion de productos</h2>
       <section class="container container-form">
-          <form id="formularioLogin">
+          <form id="guardarProducto">
             <div class="form-group">
-              <label class="mb-1" for="exampleInputEmail1">Marca</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Marca del producto">
+              <label class="mb-1">Marca</label>
+              <input type="text" class="form-control" id="marcaProducto" placeholder="Marca del producto">
             </div>
             <div class="form-group">
-              <label class="mt-1 mb-1" for="exampleInputPassword1">Nombre del producto</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Nombre del Producto">
+              <label class="mt-1 mb-1">Nombre del producto</label>
+              <input type="text" class="form-control" id="nombreProducto" placeholder="Nombre del Producto">
             </div>
             <div class="form-group">
-              <label class="mt-1 mb-1" for="exampleInputPassword1">Tamaño</label>
-              <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nombre del Producto">
+              <label class="mt-1 mb-1">Nombre del producto</label>
+              <select class="form-select" aria-label="Default select example" id="categoriaProducto">
+                <option selected>Categoria del producto</option>
+                <option value="aperitivo">Aperitivo</option>
+                <option value="cerveza">cerveza</option>
+                <option value="vodka">Vodka</option>
+              </select>
             </div>
             <div class="form-group">
-              <label class="mt-1 mb-1" for="exampleInputPassword1">Precio</label>
-              <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Nombre del Producto">
+              <label class="mt-1 mb-1">Tamaño</label>
+              <input type="text" class="form-control" id="tamañoProducto" placeholder="Nombre del Producto">
+            </div>
+            <div class="form-group">
+              <label class="mt-1 mb-1">Precio</label>
+              <input type="text" class="form-control" id="precioProducto" placeholder="Nombre del Producto">
             </div>
             <div class="ubicacion-boton d-flex">
-              <button  type="submit" class="btn boton">Agregar Producto</button>
+              <button type="submit" class="btn boton">Agregar Producto</button>
             </div>
           </form>
       </section>
