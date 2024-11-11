@@ -1,15 +1,9 @@
 {
-  "aperitivo": [
-    {
-      "producto": "Aperol",
-      "marca": "Aperol",
-      "precio": 15000,
-      "cantidad": 1,
-      "id": "8c4c"
-    },
+  "productos": [
     {
       "producto": "Fernet Branca",
       "marca": "Branca",
+      "categoria": "Aperitivo",
       "precio": 15000,
       "cantidad": 1,
       "id": "6bdd"
@@ -17,6 +11,7 @@
     {
       "producto": "Branca Menta",
       "marca": "Branca",
+      "categoria": "Aperitivo",
       "precio": 15000,
       "cantidad": 1,
       "id": "4cc8"
@@ -24,6 +19,7 @@
     {
       "producto": "Campari",
       "marca": "Davide Campari",
+      "categoria": "Aperitivo",
       "precio": 15000,
       "cantidad": 1,
       "id": "cf38"
@@ -31,6 +27,7 @@
     {
       "producto": "Rosso Classico",
       "marca": "Carpano",
+      "categoria": "Aperitivo",
       "precio": 15000,
       "cantidad": 1,
       "id": "309b"
@@ -38,6 +35,7 @@
     {
       "producto": "Cynar Original",
       "marca": "Cynar",
+      "categoria": "Aperitivo",
       "precio": 15000,
       "cantidad": 1,
       "id": "27d6"
@@ -45,29 +43,23 @@
     {
       "producto": "Fernet 1882",
       "marca": "1882",
+      "categoria": "Aperitivo",
       "precio": 15000,
       "cantidad": 1,
       "id": "e314"
     },
     {
-      "producto": "Americano",
-      "marca": "Gancia",
-      "precio": 15000,
-      "cantidad": 1,
-      "id": "9764"
+      "id": "14be",
+      "producto": "jaggermeiter",
+      "marca": "jaggermeister",
+      "categoria": "Aperitivo",
+      "precio": "34000",
+      "cantidad": "1l"
     },
-    {
-      "producto": "Punt Emes",
-      "marca": "Vermouth Originale",
-      "precio": 15000,
-      "cantidad": 1,
-      "id": "8563"
-    }
-  ],
-  "vodka": [
     {
       "producto": "Absolut Raspberry",
       "marca": "Absolut Vodka",
+      "categoria": "Vodka",
       "precio": 15000,
       "cantidad": 1,
       "id": "4bdc"
@@ -75,6 +67,7 @@
     {
       "producto": "Sernova Vodka",
       "marca": "Sernova",
+      "categoria": "Vodka",
       "precio": 15000,
       "cantidad": 1,
       "id": "d46d"
@@ -82,6 +75,7 @@
     {
       "producto": "Sky Vodka",
       "marca": "Sky",
+      "categoria": "Vodka",
       "precio": 15000,
       "cantidad": 1,
       "id": "5c86"
@@ -89,6 +83,7 @@
     {
       "producto": "Sky Maracuya",
       "marca": "Sky",
+      "categoria": "Vodka",
       "precio": 15000,
       "cantidad": 1,
       "id": "33e6"
@@ -96,6 +91,7 @@
     {
       "producto": "Sky Raspberry",
       "marca": "Sky",
+      "categoria": "Vodka",
       "precio": 15000,
       "cantidad": 1,
       "id": "dc91"
@@ -103,6 +99,7 @@
     {
       "producto": "Smirnoff Vodka",
       "marca": "Smirnoff",
+      "categoria": "Vodka",
       "precio": 15000,
       "cantidad": 1,
       "id": "bb8a"
@@ -110,6 +107,7 @@
     {
       "producto": "Smirnoff Citric",
       "marca": "Smirnoff",
+      "categoria": "Vodka",
       "precio": 15000,
       "cantidad": 1,
       "id": "c45e"
@@ -117,15 +115,15 @@
     {
       "producto": "Smirnoff Watermelon",
       "marca": "Smirnoff",
+      "categoria": "Vodka",
       "precio": 15000,
       "cantidad": 1,
       "id": "7a13"
-    }
-  ],
-  "cerveza": [
+    },
     {
       "producto": "Andes Ipa",
       "marca": "Andes",
+      "categoria": "Cerveza",
       "precio": 15000,
       "cantidad": 1,
       "id": "b594"
@@ -133,6 +131,7 @@
     {
       "producto": "Andes Roja",
       "marca": "Andes",
+      "categoria": "Cerveza",
       "precio": 15000,
       "cantidad": 1,
       "id": "d6cc"
@@ -140,6 +139,7 @@
     {
       "producto": "Andes Rubia",
       "marca": "Andes",
+      "categoria": "Cerveza",
       "precio": 15000,
       "cantidad": 1,
       "id": "2ffd"
@@ -147,6 +147,7 @@
     {
       "producto": "Corona Chica",
       "marca": "Corona",
+      "categoria": "Cerveza",
       "precio": 15000,
       "cantidad": 1,
       "id": "27dd"
@@ -154,6 +155,7 @@
     {
       "producto": "Corona Grande",
       "marca": "Corona",
+      "categoria": "Cerveza",
       "precio": 15000,
       "cantidad": 1,
       "id": "bc09"
@@ -161,6 +163,7 @@
     {
       "producto": "Grolsch",
       "marca": "Grolsch",
+      "categoria": "Cerveza",
       "precio": 15000,
       "cantidad": 1,
       "id": "3c5e"
@@ -168,6 +171,7 @@
     {
       "producto": "Heineken",
       "marca": "Heineken",
+      "categoria": "Cerveza",
       "precio": 15000,
       "cantidad": 1,
       "id": "77ba"
@@ -175,29 +179,15 @@
     {
       "producto": "Stella Artois",
       "marca": "Stella Artois",
+      "categoria": "Cerveza",
       "precio": 15000,
       "cantidad": 1,
       "id": "a4f7"
     },
     {
-      "id": "8d4e",
-      "producto": "",
-      "marca": "",
-      "precio": "",
-      "cantidad": ""
-    },
-    {
-      "id": "7cc8",
-      "producto": "",
-      "marca": "",
-      "precio": "",
-      "cantidad": ""
-    }
-  ],
-  "champagne": [
-    {
       "producto": "Baron B Champagne",
       "marca": "Baron B",
+      "categoria": "Champagne",
       "precio": 15000,
       "cantidad": 1,
       "id": "09f8"
@@ -205,6 +195,7 @@
     {
       "producto": "Chandon Delice Champagne",
       "marca": "Chandon Delice",
+      "categoria": "Champagne",
       "precio": 15000,
       "cantidad": 1,
       "id": "7cc4"
@@ -212,6 +203,7 @@
     {
       "producto": "Chandon Rose Champagne",
       "marca": "Chandon Rose",
+      "categoria": "Champagne",
       "precio": 15000,
       "cantidad": 1,
       "id": "c15c"
@@ -219,6 +211,7 @@
     {
       "producto": "Cosecha Tardia Champagne",
       "marca": "Cosecha Tardia",
+      "categoria": "Champagne",
       "precio": 15000,
       "cantidad": 1,
       "id": "865f"
@@ -226,6 +219,7 @@
     {
       "producto": "Mumm Champagne",
       "marca": "Mumm",
+      "categoria": "Champagne",
       "precio": 15000,
       "cantidad": 1,
       "id": "2095"
@@ -233,9 +227,18 @@
     {
       "producto": "Navarro Correa Champagne",
       "marca": "Navarro Correa",
+      "categoria": "Champagne",
       "precio": 15000,
       "cantidad": 1,
       "id": "c563"
+    },
+    {
+      "id": "2a70",
+      "producto": "andes negra",
+      "marca": "andes",
+      "categoria": "aperitivo",
+      "precio": "34000",
+      "cantidad": "asd"
     }
   ]
 }

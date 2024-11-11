@@ -27,6 +27,15 @@
       "dni": "40698625",
       "email": "leandro@gmail.com",
       "contraseña": "leandro123"
+    },
+    {
+      "id": "bad5",
+      "nombre": "Pablo",
+      "apellido": "G. Domínguez",
+      "fechaNacimiento": "1999-08-22",
+      "dni": "21111222",
+      "email": "dominguezpg.99@gmail.com",
+      "contraseña": "123"
     }
   ]
 }
