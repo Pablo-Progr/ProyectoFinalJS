@@ -41,42 +41,48 @@
     <main>
       <h2>Administracion de productos</h2>
       <section class="container container-form">
-          <form id="guardarProducto">
+          <form id="guardarProducto" style="display: none;">
             <div class="form-group">
               <label class="mb-1">Marca</label>
-              <input type="text" class="form-control" id="marcaProducto" placeholder="Marca del producto">
+              <input type="text" class="form-control" id="marcaProducto" placeholder="Marca del producto" required>
             </div>
             <div class="form-group">
               <label class="mt-1 mb-1">Nombre del producto</label>
-              <input type="text" class="form-control" id="nombreProducto" placeholder="Nombre del Producto">
+              <input type="text" class="form-control" id="nombreProducto" placeholder="Nombre del Producto" required>
             </div>
             <div class="form-group">
-              <label class="mt-1 mb-1">Nombre del producto</label>
-              <select class="form-select" aria-label="Default select example" id="categoriaProducto">
+              <label class="mt-1 mb-1">Categoria</label>
+              <select class="form-select" aria-label="Default select example" id="categoriaProducto" required>
                 <option selected>Categoria del producto</option>
                 <option value="aperitivo">Aperitivo</option>
-                <option value="cerveza">cerveza</option>
+                <option value="cerveza">Cerveza</option>
                 <option value="vodka">Vodka</option>
               </select>
             </div>
             <div class="form-group">
               <label class="mt-1 mb-1">Tamaño</label>
-              <input type="text" class="form-control" id="tamañoProducto" placeholder="Nombre del Producto">
+              <input type="text" class="form-control" id="tamañoProducto" placeholder="Nombre del Producto" required>
             </div>
             <div class="form-group">
               <label class="mt-1 mb-1">Precio</label>
-              <input type="text" class="form-control" id="precioProducto" placeholder="Nombre del Producto">
+              <input type="text" class="form-control" id="precioProducto" placeholder="Nombre del Producto" required>
             </div>
             <div class="form-group">
-              <label class="mt-1 mb-1">Precio</label>
-              <input type="text" class="form-control" id="imagenProducto" placeholder="cargar imagen producto">
+              <label class="mt-1 mb-1">Imagen</label>
+              <input type="text" class="form-control" id="imagenProducto" placeholder="cargar imagen producto" required>
             </div>
             <div class="ubicacion-boton d-flex">
-              <button type="submit" class="btn boton">Agregar Producto</button>
+              <button type="button" class="btn boton" id="segundoBtnAgregar">Agregar Producto</button>
+              <button type="button" class="btn boton" id="botonEditar" style="display: none;">Editar Producto</button>
             </div>
           </form>
+         
       </section>
+      <div class="ubicacion-boton d-flex justify-content-end container" >
+        <button type="button" class="btn boton" id="primerBtnAgregar">Agregar Producto</button>
+      </div>
       <section class="container seccion-tabla mt-3">
+       
         <table class=" table table-dark tabla-personalizada">
           <thead>
              <tr>

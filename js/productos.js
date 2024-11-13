@@ -23,3 +23,4 @@ const mostrarProductos = async () => {
 
 
 mostrarProductos();
+  
