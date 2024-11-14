@@ -116,12 +116,15 @@ BotonInicioSesion.addEventListener ("click",async (e) => {
             usuarios.forEach((usuario)=>{
                 if (usuario.email===EmailLogin && usuario.contraseña===ContraseñaLogin) {
                     usuarioEncontrado=true;
+
+                    
                 }
             });
 
             if(usuarioEncontrado===true){
                 alert("Inicio de sesion correcto")
                 window.location.href ="productos.html";
+                localStorage.setItem("usuarioEncontrado","true")
 
             }else{
                 alert("Email o contraseña incorrectos")

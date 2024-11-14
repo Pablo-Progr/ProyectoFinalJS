@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/sobreNosotros.css">
+    <script src="../js/sobreNosotros.js" defer></script>
     <title>Sobre Nosotros</title>
   </head>
   <body>
@@ -103,15 +104,15 @@
               </div>
               <div class="modal-body">
                 <label class="form-label">Nombre Usuario</label>
-                <input type="text" class="form-control">
+                <input id="usuarioAdmin" class="form-control">
                 <label class="form-label">Contraseña</label>
-                <input type="password" class="form-control">
+                <input id="contraseñaAdmin" type="password" class="form-control">
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary " style="border: 1px solid black;" data-bs-dismiss="modal" >
                   Close
                 </button>
-                <button type="button" class="btn btn-success" style="border: 1px solid black;">
+                <button type="button" id="LoginAdmin" class="btn btn-success" style="border: 1px solid black;">
                   Iniciar sesion
                 </button>
               </div>

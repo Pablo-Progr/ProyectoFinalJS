@@ -5,7 +5,8 @@
       "email": "admin123.com",
       "contraseña": "123",
       "confirmarContraseña": "123",
-      "id": "395a"
+      "id": "395a",
+      "rol": "admin"
     },
     {
       "id": "3cf9",

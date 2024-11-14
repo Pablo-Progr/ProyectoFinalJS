@@ -22,5 +22,52 @@ const mostrarProductos = async () => {
   };
 
 
-mostrarProductos();
+// mostrarProductos();            comento esto por que esta tirando error
   
+
+
+// traigo el valor de la variable usuarioEncontrado del js del login
+//si el valor es true, me muestra bienvenido, si el valor es false,muestra el iniciar sesion
+// para index.html y productos.html
+
+usuarioEncontrado=localStorage.getItem("usuarioEncontrado")
+
+console.log(usuarioEncontrado);
+
+let Iniciar = document.getElementById("Iniciar")
+let Iniciar2 = document.getElementById("Iniciar2")
+
+
+if (usuarioEncontrado==="true") {
+    Iniciar2.classList.add("d-none")
+    
+    Iniciar.innerHTML+=`
+
+       <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+          <a class="nav-link links-navbar text-nowrap ms-3" >Logueado</a>
+         </li>
+        <li class="nav-item">
+            <a id="CerrarSesion" class="nav-link links-navbar text-nowrap" href="">Cerrar sesion</a>
+        </li>
+    
+    `
+    let CerrarSesion =document.getElementById("CerrarSesion")
+    
+    CerrarSesion.addEventListener("click",(e)=>{
+        e.preventDefault();
+
+        localStorage.setItem("usuarioEncontrado","false")
+
+        alert("Haz cerrado sesion")
+        window.location.reload()
+
+        
+    
+    
+    
+    })
+    
+}else{
+    Iniciar2.classList.add("d-flex")
+}
