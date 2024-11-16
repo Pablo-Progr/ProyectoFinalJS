@@ -22,7 +22,7 @@ const mostrarProductos = async () => {
   };
 
 
-// mostrarProductos();            comento esto por que esta tirando error
+mostrarProductos();
   
 
 
