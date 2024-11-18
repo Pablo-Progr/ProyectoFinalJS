@@ -1,7 +1,7 @@
 // Guardo las id de los formularios de iniciar sesion y Registro
 // Guardo las id de los botones crear cuenta y iniciar sesion
-const formularioLogin = document.getElementById("formularioLogin")
 const formularioRegistro = document.getElementById("formularioRegistro")
+const formularioLogin = document.getElementById("formularioLogin")
 const enlaceLogin = document.getElementById("enlaceLogin")
 const enlaceCrearCuenta = document.getElementById("enlaceCrearCuenta")
 
@@ -9,12 +9,6 @@ const enlaceCrearCuenta = document.getElementById("enlaceCrearCuenta")
 // evento para que al hacer click en iniciar sesion, desaparezca el login de inicio de sesion
 //  y aparezca el login de registro
 
-enlaceCrearCuenta.addEventListener("click",(e) => {
-    e.preventDefault();
-    formularioLogin.classList.add("d-none")
-    formularioRegistro.classList.remove("d-none")
-
-});
 
 enlaceLogin.addEventListener("click",(e)=>{
     e.preventDefault();
@@ -23,10 +17,26 @@ enlaceLogin.addEventListener("click",(e)=>{
 
 });
 
+enlaceCrearCuenta.addEventListener("click",(e) => {
+    e.preventDefault();
+    formularioLogin.classList.add("d-none")
+    formularioRegistro.classList.remove("d-none")
+
+});
+
+
+
+const BotonCrearCuenta=document.getElementById("BotonCrearCuenta");
+
+
+
 // evento al hacer click en Registrarse se guarden los datos en las variables y meter los datos guardados en el json
 
-BotonCrearCuenta.addEventListener  ("click", async (e)=>{
-    e.preventDefault();
+BotonCrearCuenta.addEventListener  ("click", async (event)=>{
+let usuarioRegistrado=false;
+
+event.preventDefault();
+    
 let Nombre = document.getElementById("nombreRegistro").value;
 let Apellido = document.getElementById("apellidoRegistro").value;
 let FechaNac = document.getElementById("fechaRegistro").value;
@@ -54,35 +64,90 @@ formularioRegistro.reset();
         return;
     }
 
-// if para dar error si ponen contraseñas iguales o no ingresan todos los datos
+
+// codigo para verificar que el email y el dni no este ya registrado
+
+try {
+    let respuesta = await axios.get ("http://localhost:3000/usuarios")
+
+    usuarios=respuesta.data;
+    emailEncontrado=false
+    dniEncontrado=false;
+
+    usuarios.forEach((usuario)=>{
+
+        if (usuario.email==Email) {
+            emailEncontrado=true;
+        }else if(usuario.dni==Dni){
+            dniEncontrado=true;
+
+        }
 
 
-    if (Contraseña && Email && Nombre && ConfirmarContraseña) {
+    })
+    
+   } catch (error) {
+    console.error("Error axios")
+    
+   }
+// codigo para verificar que el usuario ingrese todos los campos
+// codigo para verificar que la contraseña sea igual a confirmacion de contraseña
+// codigo para verificar si el email ya esta registrado, no lo deje registrarse.
+
+    if (Nombre && Apellido && FechaNac && Contraseña && Email && Nombre && ConfirmarContraseña) {
         if(Contraseña===ConfirmarContraseña){
-            try {
-                let response = await axios.post("http://localhost:3000/usuarios",{
-                
-                    nombre: Nombre,
-                    apellido: Apellido,
-                    fechaNacimiento: FechaNac,
-                    dni: Dni,
-                    email : Email,
-                    contraseña: Contraseña,
-                      
-                    })
-                    console.log(response);
+            if (emailEncontrado==false) { 
+                if (dniEncontrado==false) {
                     Swal.fire({
-                    position: "top-end",
-                    icon: "success",
-                    title: "Your work has been saved",
-                    timer: 50000
-                    });
+                        title: '¡Genial!',
+                        text: 'Registro completado con éxito.',
+                        icon: 'success',
+                        timer: 3000
+                      });
+                      
+
+                    
+                    setTimeout( async () => {
+                                            
+                    try { 
+                        let response = await axios.post("http://localhost:3000/usuarios",{
+                        
+                            nombre: Nombre,
+                            apellido: Apellido,
+                            fechaNacimiento: FechaNac,
+                            dni: Dni,
+                            email : Email,
+                            contraseña: Contraseña,
+                            })
+
+                    } catch (error) {
+                        
+                        console.error("error al guardar los datos: ",error);
+                        Swal.fire({
+                            title: '¡Hola!',
+                            text: 'Error al registrarse',
+                            icon: 'error',
+                            timer: 3000, 
+                            timerProgressBar: true,
+                            showConfirmButton: false 
+                          });
+
+
+                        
+                    }
+                         
+                    }, 3500);
+
+                    
+                }else{
+                    alert("Dni ya registrado, por favor ingrese uno distinto")
+                }
+
                 
-            } catch (error) {
-                alert("Error")
-                console.error("error al guardar los datos: ",error);
-                
+            }else{
+                alert("Email ya registrado, por favor ingrese uno distinto")
             }
+
 
         }else{
             alert("Las contraseñas son distintas")
@@ -92,57 +157,61 @@ formularioRegistro.reset();
         alert("Debe llenar todos los campos")
     }
 
-
 });
 
-//evento para que al iniciar sesion me mande a la pag productos
-
-BotonInicioSesion.addEventListener ("click",async (e) => {
-    e.preventDefault();
-
-    let EmailLogin=document.getElementById("emailLogin").value;
-    let ContraseñaLogin=document.getElementById("contraseñaLogin").value;
-
-    if (EmailLogin&&ContraseñaLogin) {
-        try {
-
-            let response = await axios.get("http://localhost:3000/usuarios");
-
-            let usuarios=response.data;
-
-            let usuarioEncontrado = false;
 
 
-            usuarios.forEach((usuario)=>{
-                if (usuario.email===EmailLogin && usuario.contraseña===ContraseñaLogin) {
-                    usuarioEncontrado=true;
+
+// //evento para que al iniciar sesion me mande a la pag productos
+
+// const BotonInicioSesion=document.getElementById("BotonInicioSesion");
+
+// BotonInicioSesion.addEventListener ("click",async (e) => {
+//     e.preventDefault();
+
+//     let EmailLogin=document.getElementById("emailLogin").value;
+//     let ContraseñaLogin=document.getElementById("contraseñaLogin").value;
+
+//     if (EmailLogin&&ContraseñaLogin) {
+//         try {
+
+//             let response = await axios.get("http://localhost:3000/usuarios");
+
+//             let usuarios=response.data;
+
+//             let usuarioEncontrado = false;
+
+
+//             usuarios.forEach((usuario)=>{
+//                 if (usuario.email===EmailLogin && usuario.contraseña===ContraseñaLogin) {
+//                     usuarioEncontrado=true;
 
                     
-                }
-            });
+//                 }
+//             });
 
-            if(usuarioEncontrado===true){
-                alert("Inicio de sesion correcto")
-                window.location.href ="productos.html";
-                localStorage.setItem("usuarioEncontrado","true")
+//             if(usuarioEncontrado===true){
+//                 alert("Inicio de sesion correcto")
+//                 window.location.href ="productos.html";
+//                 localStorage.setItem("usuarioEncontrado","true")
 
-            }else{
-                alert("Email o contraseña incorrectos")
-            }
+//             }else{
+//                 alert("Email o contraseña incorrectos")
+//             }
 
 
        
-        } catch (error) {
-            console.error("Error al iniciar sesion, intetalo de nuevo, error: ",error);
-            alert("Error al iniciar sesion, intentalo de nuevo")
+//         } catch (error) {
+//             console.error("Error al iniciar sesion, intetalo de nuevo, error: ",error);
+//             alert("Error al iniciar sesion, intentalo de nuevo")
             
-        }
+//         }
         
-    }else{
-        alert("Por favor rellene todos los campos")
-    }
+//     }else{
+//         alert("Por favor rellene todos los campos")
+//     }
 
-})
+// })
 
 
 

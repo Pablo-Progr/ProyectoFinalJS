@@ -1,13 +1,13 @@
 {
   "productos": [
     {
-      "id": "e5d1",
-      "producto": "andes negra",
       "marca": "andes",
-      "categoria": "cerveza",
-      "precio": "13000",
+      "producto": "andes negra",
+      "categoria": "Categoria del producto",
       "tamanio": "380ml",
-      "imagen": " "
+      "precio": "1300",
+      "imagen": " ",
+      "id": "e5d1"
     },
     {
       "id": "f2cb",
