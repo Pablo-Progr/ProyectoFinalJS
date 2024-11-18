@@ -60,7 +60,14 @@ formularioRegistro.reset();
     }
 
     if (edad<18) {
-        alert("Debe ser mayor de edad para registrarse");
+        Swal.fire({
+            title: '¡Error!',
+            text: 'Tienes que ser mayor de edad para poder registrarte',
+            icon: 'error',
+            timer: 3000, 
+            timerProgressBar: true,
+            showConfirmButton: false 
+          });
         return;
     }
 
@@ -140,21 +147,50 @@ try {
 
                     
                 }else{
-                    alert("Dni ya registrado, por favor ingrese uno distinto")
+                    Swal.fire({
+                        title: '¡Error!',
+                        text: 'Dni ya registrado, por favor ingrese uno distinto',
+                        icon: 'error',
+                        timer: 3000, 
+                        timerProgressBar: true,
+                        showConfirmButton: false 
+                      });
+                    
                 }
 
                 
             }else{
-                alert("Email ya registrado, por favor ingrese uno distinto")
+                Swal.fire({
+                    title: '¡Error!',
+                    text: 'Email ya registrado, por favor ingrese uno distinto',
+                    icon: 'error',
+                    timer: 3000, 
+                    timerProgressBar: true,
+                    showConfirmButton: false 
+                  });
             }
 
 
         }else{
-            alert("Las contraseñas son distintas")
+            Swal.fire({
+                title: '¡Error!',
+                text: 'Las contraseñas son distintas',
+                icon: 'error',
+                timer: 3000, 
+                timerProgressBar: true,
+                showConfirmButton: false 
+              });
         }
 
     }else{
-        alert("Debe llenar todos los campos")
+        Swal.fire({
+            title: '¡Error!',
+            text: 'Debe rellenar todos los campos',
+            icon: 'error',
+            timer: 3000, 
+            timerProgressBar: true,
+            showConfirmButton: false 
+          });
     }
 
 });
@@ -162,56 +198,90 @@ try {
 
 
 
-// //evento para que al iniciar sesion me mande a la pag productos
+//evento para que al iniciar sesion me mande a la pag productos
 
-// const BotonInicioSesion=document.getElementById("BotonInicioSesion");
+const BotonInicioSesion=document.getElementById("BotonInicioSesion");
 
-// BotonInicioSesion.addEventListener ("click",async (e) => {
-//     e.preventDefault();
+BotonInicioSesion.addEventListener ("click",async (e) => {
+    e.preventDefault();
 
-//     let EmailLogin=document.getElementById("emailLogin").value;
-//     let ContraseñaLogin=document.getElementById("contraseñaLogin").value;
+    let EmailLogin=document.getElementById("emailLogin").value;
+    let ContraseñaLogin=document.getElementById("contraseñaLogin").value;
 
-//     if (EmailLogin&&ContraseñaLogin) {
-//         try {
+    if (EmailLogin&&ContraseñaLogin) {
+        try {
 
-//             let response = await axios.get("http://localhost:3000/usuarios");
+            let response = await axios.get("http://localhost:3000/usuarios");
 
-//             let usuarios=response.data;
+            let usuarios=response.data;
 
-//             let usuarioEncontrado = false;
+            let usuarioEncontrado = false;
 
 
-//             usuarios.forEach((usuario)=>{
-//                 if (usuario.email===EmailLogin && usuario.contraseña===ContraseñaLogin) {
-//                     usuarioEncontrado=true;
+            usuarios.forEach((usuario)=>{
+                if (usuario.email===EmailLogin && usuario.contraseña===ContraseñaLogin) {
+                    usuarioEncontrado=true;
 
                     
-//                 }
-//             });
+                }
+            });
 
-//             if(usuarioEncontrado===true){
-//                 alert("Inicio de sesion correcto")
-//                 window.location.href ="productos.html";
-//                 localStorage.setItem("usuarioEncontrado","true")
+            if(usuarioEncontrado===true){
+                Swal.fire({
+                    title: "Iniciaste sesion con éxito.",
+                    text: 'Aguarda un segundo, por favor',
+                    icon: 'success',
+                    timer:3000,
+                    timerProgressBar:true
+                 });
+               setTimeout(()=> {
+                window.location.href ="productos.html";
+                localStorage.setItem("usuarioEncontrado","true")
 
-//             }else{
-//                 alert("Email o contraseña incorrectos")
-//             }
+
+               },3500) 
+
+                  
+
+
+            }else{
+                Swal.fire({
+                    title: '¡Error!',
+                    text: 'Email o contraseña incorrectos',
+                    icon: 'error',
+                    timer: 3000, 
+                    timerProgressBar: true,
+                    showConfirmButton: false 
+                  });
+            }
 
 
        
-//         } catch (error) {
-//             console.error("Error al iniciar sesion, intetalo de nuevo, error: ",error);
-//             alert("Error al iniciar sesion, intentalo de nuevo")
+        } catch (error) {
+            console.error("Error al iniciar sesion, intetalo de nuevo, error: ",error);
+            Swal.fire({
+                title: '¡Error!',
+                text: 'Error axios',
+                icon: 'error',
+                timer: 3000, 
+                timerProgressBar: true,
+                showConfirmButton: false 
+              });
             
-//         }
+        }
         
-//     }else{
-//         alert("Por favor rellene todos los campos")
-//     }
+    }else{
+        Swal.fire({
+            title: '¡Error!',
+            text: 'Debe rellenar todos los campos',
+            icon: 'error',
+            timer: 3000, 
+            timerProgressBar: true,
+            showConfirmButton: false 
+          });
+    }
 
-// })
+})
 
 
 

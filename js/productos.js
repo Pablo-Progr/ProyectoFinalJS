@@ -58,10 +58,24 @@ if (usuarioEncontrado==="true") {
     CerrarSesion.addEventListener("click",(e)=>{
         e.preventDefault();
 
-        localStorage.setItem("usuarioEncontrado","false")
+        Swal.fire({
+            title: "Haz cerrado sesion con exito.",
+            text: 'Gracias por tu visita, vuelve pronto',
+            icon: 'success',
+            timer:3000,
+            timerProgressBar:true
+         });
 
-        alert("Haz cerrado sesion")
-        window.location.reload()
+
+        setTimeout(()=>{
+            localStorage.setItem("usuarioEncontrado","false")
+            window.location.reload()
+        },3500)
+
+
+
+
+
 
         
     
