@@ -53,15 +53,6 @@
       "precio": "2000",
       "imagen": "undefined123",
       "id": "1a39"
-    },
-    {
-      "marca": "Pepsi",
-      "producto": "Pepsi Black",
-      "categoria": "aperitivo",
-      "tamanio": "2l",
-      "precio": "2500",
-      "imagen": "https://borrachines.com.ar/wp-content/uploads/2021/11/Foto-1-11-e1727277304189.png",
-      "id": "b471"
     }
   ]
 }
