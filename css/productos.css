@@ -33,8 +33,7 @@ aside{
 
 .card{
     border: 2px solid #bca471;
-    box-shadow: 3px 3px 5px rgb(0, 0, 0);
-    margin-bottom: 5px;
+    margin-bottom: 30px;
     
 }
 
@@ -43,6 +42,9 @@ aside{
     background-color: black;
     text-align: center;
     border-radius: 0px 0px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .card-img{

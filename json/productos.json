@@ -1,13 +1,13 @@
 {
   "productos": [
     {
-      "marca": "Andes",
-      "producto": "Andes Negra",
+      "id": "e5d1",
+      "producto": "andes negra",
+      "marca": "andes",
       "categoria": "cerveza",
-      "tamanio": "380ml",
       "precio": "13000",
-      "imagen": " ",
-      "id": "e5d1"
+      "tamanio": "380ml",
+      "imagen": " "
     },
     {
       "id": "f2cb",
@@ -62,15 +62,6 @@
       "precio": "2500",
       "imagen": "https://borrachines.com.ar/wp-content/uploads/2021/11/Foto-1-11-e1727277304189.png",
       "id": "b471"
-    },
-    {
-      "id": "59b7",
-      "producto": "Agua",
-      "marca": "Villavicencio",
-      "categoria": "Cerveza\"",
-      "precio": "1000",
-      "tamanio": "1l",
-      "imagen": "https://alberdisa.vteximg.com.br/arquivos/ids/157056-1000-1000/Agua-Mineral-Villavicencio-S-G-2000cc.jpg?v=637375299303370000"
     }
   ]
 }
