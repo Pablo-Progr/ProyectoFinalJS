@@ -112,26 +112,22 @@ const ActualizarProducto = async () => {
   
 }
 
-const mostrarProducto = async (id) => {
+const mostrarProducto = (id,producto,imagen) => {
   try {
-    let response = await axios.get("http://localhost:3001/productos");
-    console.log(id)
+    document.getElementById("modalImagenProducto").style.display="block"
 
     document.getElementById("modalImagenProducto").innerHTML += `
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class=" fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">
-                  ${data.producto}
-                </h1>
+                  ID= #${id} Producto:${producto}
+                </h1>git 
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <label class="form-label">Nombre Usuario</label>
-                <input type="text" class="form-control">
-                <label class="form-label">Contraseña</label>
-                <input type="password" class="form-control">
+                ${imagen}
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary " style="border: 1px solid black;" data-bs-dismiss="modal" >
@@ -164,7 +160,7 @@ const getTablaProductos = async () => {
              <td>${producto.tamanio}</td>
              <td>$${producto.precio}</td>
              <td class="iconos">
-              <button class="icono icono-mirar" onClick="mostrarProducto('${producto}')">
+              <button class="icono icono-mirar" onClick="mostrarProducto('${producto.id}','${producto.producto}','${producto.imagen}')">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
                  <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
                  <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
