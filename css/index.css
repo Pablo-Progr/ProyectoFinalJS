@@ -13,7 +13,6 @@
 .card{
     border: 2px solid #bca471;
     box-shadow: 3px 3px 5px rgb(0, 0, 0);
-    
 }
 
 .card:hover {
@@ -28,17 +27,20 @@
     background-color: black;
     text-align: center;
     border-radius: 0px 0px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.contenedor-bebidas{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .card-img{
     width: 285,6px;
     height: 285px;
     border-radius: 5px 5px 0px 0px;
-}
-
-.boton-adm{
-    display: flex;
-    justify-content: center
 }
 
 .btn{
@@ -49,3 +51,8 @@
 .modal-content{
     background-color: #bca471;
 }
+
+footer h3{
+    padding: 20px;
+}
+

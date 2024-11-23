@@ -1,40 +1,67 @@
 {
   "productos": [
     {
-      "producto": "Fernet Branca",
-      "marca": "Branca",
-      "categoria": "Aperitivo",
-      "precio": 15000,
-      "cantidad": 1,
-      "imagen": " ",
-      "id": "6bdd"
-    },
-    {
-      "producto": "Branca Menta",
-      "marca": "Branca",
-      "categoria": "Aperitivo",
-      "precio": 15000,
-      "cantidad": 1,
-      "imagen": " ",
-      "id": "4cc8"
-    },
-    {
-      "producto": "Campari",
-      "marca": "Davide Campari",
-      "categoria": "Aperitivo",
-      "precio": 15000,
-      "cantidad": 1,
-      "imagen": " ",
-      "id": "cf38"
-    },
-    {
       "id": "e5d1",
       "producto": "andes negra",
       "marca": "andes",
       "categoria": "cerveza",
       "precio": "13000",
-      "cantidad": "380ml",
+      "tamanio": "380ml",
       "imagen": " "
+    },
+    {
+      "id": "f2cb",
+      "producto": "Bohemian Pilser",
+      "marca": "Patagonia",
+      "categoria": "cerveza",
+      "precio": "14000",
+      "tamanio": "380ml",
+      "imagen": "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/productos/b/0000025000/25378.jpg"
+    },
+    {
+      "id": "273e",
+      "producto": "24.7",
+      "marca": "Patagonia",
+      "categoria": "cerveza",
+      "precio": "14000",
+      "tamanio": "473ml",
+      "imagen": "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/productos/b/0000005000/5700.jpg"
+    },
+    {
+      "id": "6509",
+      "producto": "Holdmoser",
+      "marca": "Holdmoser",
+      "categoria": "aperitivo",
+      "precio": "20500",
+      "tamanio": "700ml",
+      "imagen": "https://borrachines.com.ar/wp-content/uploads/2021/11/Foto-1-11-e1727277304189.png"
+    },
+    {
+      "id": "b7a2",
+      "producto": "Absolute Mango",
+      "marca": "Absolute",
+      "categoria": "vodka",
+      "precio": "22900",
+      "tamanio": "700ml",
+      "imagen": "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3070528_f.jpg"
+    },
+    {
+      "marca": "Coca-Cola",
+      "producto": "Coca",
+      "categoria": "aperitivo",
+      "tamanio": "1L",
+      "precio": "2000",
+      "imagen": "undefined123",
+      "id": "1a39"
+    },
+    {
+      "marca": "Pepsi",
+      "producto": "Pepsi Black",
+      "categoria": "aperitivo",
+      "tamanio": "2l",
+      "precio": "2500",
+      "imagen": "https://borrachines.com.ar/wp-content/uploads/2021/11/Foto-1-11-e1727277304189.png",
+      "id": "b471"
     }
   ]
 }
