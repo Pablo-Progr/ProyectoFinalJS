@@ -24,24 +24,30 @@ const agregarProducto = async () => {
       });
   } else {
     try {
-    let response = await axios.post("http://localhost:3001/productos", {
-      producto,
-      marca,
-      categoria,
-      precio,
-      tamanio,
-      imagen,
-    });
-      if  (response) {
-        await Swal.fire({
-          title: "Producto Agregado!",
-          icon: "success",
+      Swal.fire({
+        title: "Producto Agregado",
+        text: "Producto cargado correctamente",
+        icon: "success",
+        timer:1500
+      });
+      setTimeout(async ()=> {
+        let response = await axios.post("http://localhost:3001/productos", {
+          producto,
+          marca,
+          categoria,
+          precio,
+          tamanio,
+          imagen,
         });
-      } else {
-        alert("no se cargo");
-      }
+       },2000) 
     } catch (error) {
       console.log(error);
+      Swal.fire({
+        title: "No se pudo agregar el producto",
+        text: "Error en axios al agregar,el producto",
+        icon: "error",
+        timer:2000,
+      });
     }
   }
 
@@ -54,23 +60,32 @@ const eliminarProducto = async (id) => {
   ID = id
   console.log(id);
   try {
-    let response = await axios.delete("http://localhost:3001/productos/" + ID);
+    Swal.fire({
+      title: "Producto Eliminado!",
+      text: "You clicked the button!",
+      icon: "success",
+    });
+    setTimeout(async () => {
+      let response = await axios.delete("http://localhost:3001/productos/" + ID);
 
-    if (response) {
-      Swal.fire({
-        title: "Producto Eliminado!",
-        text: "You clicked the button!",
-        icon: "success",
-      });
-    } else {
-      Swal.fire({
-        title: "No Se Pudo Eliminar El Producto!",
-        text: "You clicked the button!",
-        icon: "error",
-      });
-    }
+      if (response) {
+        Swal.fire({
+          title: "Producto Eliminado!",
+          text: "Producto eliminado correctamente",
+          icon: "success",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
+    },2000)
   } catch (error) {
     console.log(error)
+    Swal.fire({
+      title: "No Se Pudo Eliminar El Producto!",
+      text: "You clicked the button!",
+      icon: "error",
+    });
+  
   }
 };
 
@@ -95,40 +110,41 @@ const editarProducto = (id,marca,producto,tamanio,precio,imagen) =>{
 const ActualizarProducto = async () => {
   
   try {
-    
-    let marca = document.getElementById("marcaProducto").value;
-    let producto = document.getElementById("nombreProducto").value;
-    let categoria = document.getElementById("categoriaProducto").value;
-    let tamanio = document.getElementById("tamañoProducto").value;
-    let precio = document.getElementById("precioProducto").value;
-    let imagen = document.getElementById("imagenProducto").value;
 
-    console.log(ID)
-    let response = await axios.put("http://localhost:3001/productos/" + ID,{
-      marca,
-      producto,
-      categoria,
-      tamanio,
-      precio,
-      imagen
-    })
-
-    if (response) {
-      Swal.fire({
-        title: "Producto Editado!",
-        text: "You clicked the button!",
-        icon: "success",
-      });
-    } else {
-      Swal.fire({
-        title: "No Se Pudo Actualizar El Pedido!",
-        text: "You clicked the button!",
-        icon: "error",
-      });
-    }
+    Swal.fire({
+      title: "Producto Editado!",
+      text: "You clicked the button!",
+      icon: "success",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    setTimeout(async ()=>{
+      let marca = document.getElementById("marcaProducto").value;
+      let producto = document.getElementById("nombreProducto").value;
+      let categoria = document.getElementById("categoriaProducto").value;
+      let tamanio = document.getElementById("tamañoProducto").value;
+      let precio = document.getElementById("precioProducto").value;
+      let imagen = document.getElementById("imagenProducto").value;
   
+      console.log(ID)
+      let response = await axios.put("http://localhost:3001/productos/" + ID,{
+        marca,
+        producto,
+        categoria,
+        tamanio,
+        precio,
+        imagen
+      })
+
+    },2000)
+
   } catch (error) {
     console.log(error)
+    Swal.fire({
+      title: "No Se Pudo Actualizar El Pedido!",
+      text: "You clicked the button!",
+      icon: "error",
+    });
   }
 
   
