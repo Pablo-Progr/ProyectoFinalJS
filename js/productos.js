@@ -40,13 +40,19 @@ let Iniciar2 = document.getElementById("Iniciar2")
 
 
 if (usuarioEncontrado==="true") {
+
+    nombreusuario=localStorage.getItem("usuarionombre")
+
+    console.log("nombre:"+nombreusuario);
+
+
     Iniciar2.classList.add("d-none")
     
     Iniciar.innerHTML+=`
 
        <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item">
-          <a class="nav-link links-navbar text-nowrap ms-3" >Logueado</a>
+          <a class="nav-link links-navbar text-nowrap ms-3" >Bienvenido, ${nombreusuario}</a>
          </li>
         <li class="nav-item">
             <a id="CerrarSesion" class="nav-link links-navbar text-nowrap" href="">Cerrar sesion</a>
