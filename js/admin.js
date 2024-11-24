@@ -16,8 +16,14 @@ const agregarProducto = async () => {
   let tamanio = document.getElementById("tamañoProducto").value;
   let imagen = document.getElementById("imagenProducto").value;
 
-
-  try {
+  if (categoria == " " || marca == " " || producto == "" || precio == " " || tamanio == " " || imagen == ""){
+    Swal.fire({
+        title: "Faltan Campos Por Complentar!",
+        text: "You clicked the button!",
+        icon: "error",
+      });
+  } else {
+    try {
     let response = await axios.post("http://localhost:3001/productos", {
       producto,
       marca,
@@ -26,21 +32,21 @@ const agregarProducto = async () => {
       tamanio,
       imagen,
     });
-
-    console.log(response);
-
-    if (response) {
-      Swal.fire({
-        title: "Good job!",
-        text: "You clicked the button!",
-        icon: "success",
-      });
-    } else {
-      alert("no se cargo");
+      if  (response) {
+        await Swal.fire({
+          title: "Producto Agregado!",
+          icon: "success",
+        });
+      } else {
+        alert("no se cargo");
+      }
+    } catch (error) {
+      console.log(error);
     }
-  } catch (error) {
-    console.log(error);
   }
+
+
+  
 };
 
 const eliminarProducto = async (id) => {
@@ -51,9 +57,17 @@ const eliminarProducto = async (id) => {
     let response = await axios.delete("http://localhost:3001/productos/" + ID);
 
     if (response) {
-      alert("producto eliminado");
+      Swal.fire({
+        title: "Producto Eliminado!",
+        text: "You clicked the button!",
+        icon: "success",
+      });
     } else {
-      alert("No se pudo eliminar el producto");
+      Swal.fire({
+        title: "No Se Pudo Eliminar El Producto!",
+        text: "You clicked the button!",
+        icon: "error",
+      });
     }
   } catch (error) {
     console.log(error)
@@ -100,9 +114,17 @@ const ActualizarProducto = async () => {
     })
 
     if (response) {
-      alert("producto actualizado");
+      Swal.fire({
+        title: "Producto Editado!",
+        text: "You clicked the button!",
+        icon: "success",
+      });
     } else {
-      alert("No se pudo actualizar el producto");
+      Swal.fire({
+        title: "No Se Pudo Actualizar El Pedido!",
+        text: "You clicked the button!",
+        icon: "error",
+      });
     }
   
   } catch (error) {

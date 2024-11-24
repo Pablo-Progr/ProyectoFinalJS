@@ -48,20 +48,20 @@
     {
       "marca": "Coca-Cola",
       "producto": "Coca",
-      "categoria": "aperitivo",
-      "tamanio": "1L",
+      "categoria": "Categoria del producto",
+      "tamanio": "1.5L",
       "precio": "2000",
       "imagen": "undefined123",
       "id": "1a39"
     },
     {
-      "marca": "Pepsi",
-      "producto": "Pepsi Black",
-      "categoria": "aperitivo",
-      "tamanio": "2l",
+      "marca": "quilmes",
+      "producto": "quilmes negra",
+      "categoria": "Categoria del producto",
+      "tamanio": "375ml",
       "precio": "2500",
-      "imagen": "https://borrachines.com.ar/wp-content/uploads/2021/11/Foto-1-11-e1727277304189.png",
-      "id": "b471"
+      "imagen": "https://www.espaciovino.com.ar/media/default/0001/70/thumb_69199_default_big.jpeg",
+      "id": "51ee"
     }
   ]
 }
