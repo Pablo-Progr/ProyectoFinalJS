@@ -221,6 +221,11 @@ BotonInicioSesion.addEventListener ("click",async (e) => {
             usuarios.forEach((usuario)=>{
                 if (usuario.email===EmailLogin && usuario.contraseña===ContraseñaLogin) {
                     usuarioEncontrado=true;
+                    usuarioNombre=usuario.nombre;
+                    
+                    localStorage.setItem("usuarionombre",usuario.nombre)
+
+
 
                     
                 }
