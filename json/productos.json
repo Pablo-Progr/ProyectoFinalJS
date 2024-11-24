@@ -1,15 +1,6 @@
 {
   "productos": [
     {
-      "id": "e5d1",
-      "producto": "andes negra",
-      "marca": "andes",
-      "categoria": "cerveza",
-      "precio": "13000",
-      "tamanio": "380ml",
-      "imagen": " "
-    },
-    {
       "id": "f2cb",
       "producto": "Bohemian Pilser",
       "marca": "Patagonia",

@@ -134,39 +134,40 @@ const ActualizarProducto = async () => {
   
 }
 
-const mostrarProducto = (id,producto,imagen) => {
+const mostrarProducto = (id, producto, imagen) => {
   try {
-    document.getElementById("modalImagenProducto").style.display="block"
+    const existingModal = document.getElementById("exampleModal");
+    if (existingModal) {
+      existingModal.remove();
+    }
 
-    document.getElementById("modalImagenProducto").innerHTML += `
-    <div class=" fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">
-                  ID= #${id} Producto:${producto}
-                </h1>git 
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                ${imagen}
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary " style="border: 1px solid black;" data-bs-dismiss="modal" >
-                  Close
-                </button>
-                <button type="button" class="btn btn-success" style="border: 1px solid black;">
-                  Iniciar sesion
-                </button>
-              </div>
+    const modalHTML = `
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content" style= "background-color: #bca471">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="${imagen}" alt="${producto}" class="img-fluid" style="max-height: 300px"; "color: black">
+              <h2 class="modal-title fs-5" id="exampleModalLabel" style= "color: black">
+                ID: #${id} - ${producto}
+              </h2>
             </div>
           </div>
         </div>
-  `;
+      </div>
+    `;
+
+    document.body.insertAdjacentHTML("beforeend", modalHTML);
+
+    const modal = new bootstrap.Modal(document.getElementById("exampleModal"));
+    modal.show();
   } catch (error) {
     console.log(error);
   }
 };
+
 
 const getTablaProductos = async () => {
   try {
