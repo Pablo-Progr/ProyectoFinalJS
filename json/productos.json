@@ -1,58 +1,157 @@
 {
   "productos": [
     {
-      "id": "f2cb",
+      "marca": "Patagonia",
       "producto": "Bohemian Pilser",
-      "marca": "Patagonia",
-      "categoria": "cerveza",
-      "precio": "14000",
+      "categoria": "Cerveza",
       "tamanio": "380ml",
-      "imagen": "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/productos/b/0000025000/25378.jpg"
+      "precio": "14500",
+      "imagen": "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/productos/b/0000025000/25378.jpg",
+      "id": "f2cb"
     },
     {
-      "id": "273e",
-      "producto": "24.7",
       "marca": "Patagonia",
-      "categoria": "cerveza",
-      "precio": "14000",
+      "producto": "24.7",
+      "categoria": "Cerveza",
       "tamanio": "473ml",
-      "imagen": "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/productos/b/0000005000/5700.jpg"
+      "precio": "14000",
+      "imagen": "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/productos/b/0000005000/5700.jpg",
+      "id": "273e"
     },
     {
-      "id": "6509",
-      "producto": "Holdmoser",
       "marca": "Holdmoser",
-      "categoria": "aperitivo",
+      "producto": "Holdmoser",
+      "categoria": "Aperitivo",
+      "tamanio": "700ml",
       "precio": "20500",
-      "tamanio": "700ml",
-      "imagen": "https://borrachines.com.ar/wp-content/uploads/2021/11/Foto-1-11-e1727277304189.png"
+      "imagen": "https://borrachines.com.ar/wp-content/uploads/2021/11/Foto-1-11-e1727277304189.png",
+      "id": "6509"
     },
     {
-      "id": "b7a2",
-      "producto": "Absolute Mango",
       "marca": "Absolute",
-      "categoria": "vodka",
-      "precio": "22900",
+      "producto": "Absolute Mango",
+      "categoria": "Vodka",
       "tamanio": "700ml",
-      "imagen": "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3070528_f.jpg"
+      "precio": "22900",
+      "imagen": "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3070528_f.jpg",
+      "id": "b7a2"
     },
     {
-      "marca": "Coca-Cola",
-      "producto": "Coca",
-      "categoria": "Categoria del producto",
-      "tamanio": "1.5L",
-      "precio": "2000",
-      "imagen": "undefined123",
-      "id": "1a39"
+      "id": "d9fb",
+      "producto": "Fernet",
+      "marca": "Branca",
+      "categoria": "Aperitivo",
+      "precio": "19000",
+      "tamanio": "1L",
+      "imagen": "https://acdn.mitiendanube.com/stores/002/056/357/products/20230227_1201181-888147700dde4915dc16775101309146-480-0.webp"
     },
     {
-      "marca": "quilmes",
-      "producto": "quilmes negra",
-      "categoria": "Categoria del producto",
-      "tamanio": "375ml",
-      "precio": "2500",
-      "imagen": "https://www.espaciovino.com.ar/media/default/0001/70/thumb_69199_default_big.jpeg",
-      "id": "51ee"
+      "id": "7ac8",
+      "producto": "Agua",
+      "marca": "Villavicencio",
+      "categoria": "SinAlcohol",
+      "precio": "9600",
+      "tamanio": "500ml x12",
+      "imagen": "https://acdn.mitiendanube.com/stores/002/056/357/products/20220829_171533-da0a734d99d1a7e1ef16618046212087-480-0.webp"
+    },
+    {
+      "id": "d87f",
+      "producto": "Catena Malbec",
+      "marca": "Catena",
+      "categoria": "Vino",
+      "precio": "19900",
+      "tamanio": "750ml",
+      "imagen": "https://acdn.mitiendanube.com/stores/002/056/357/products/20230116_1620131-9269580b8ad480e7ce16738989815530-480-0.webp"
+    },
+    {
+      "id": "584c",
+      "producto": "Vino Blanco",
+      "marca": "Cosecha Tardia",
+      "categoria": "Vino",
+      "precio": "3700",
+      "tamanio": "750ml",
+      "imagen": "https://acdn.mitiendanube.com/stores/002/056/357/products/img-20191028-wa0055-e9151c2a3383de12e116614367233894-480-0.webp"
+    },
+    {
+      "id": "9afa",
+      "producto": "Extra Brut",
+      "marca": "Navarro Correas",
+      "categoria": "Champage",
+      "precio": "7800",
+      "tamanio": "750ml",
+      "imagen": "https://acdn.mitiendanube.com/stores/002/056/357/products/20220330_165459-5fa3a4ecbc64fb785416513712396606-480-0.webp"
+    },
+    {
+      "id": "ae46",
+      "producto": "Delice",
+      "marca": "Chandon",
+      "categoria": "Champage",
+      "precio": "13200",
+      "tamanio": "750ml",
+      "imagen": "https://acdn.mitiendanube.com/stores/002/056/357/products/20230422_1338401-e826efdb506335933916821816133860-480-0.webp"
+    },
+    {
+      "marca": "Baron B",
+      "producto": "Extra Brut",
+      "categoria": "Champage",
+      "tamanio": "750ml",
+      "precio": "24950",
+      "imagen": "https://acdn.mitiendanube.com/stores/002/056/357/products/20230207_1233541-91f936dfe17e73218816757840934580-480-0.webp",
+      "id": "dcc0"
+    },
+    {
+      "id": "7b4d",
+      "producto": "Gancia",
+      "marca": "Gancia",
+      "categoria": "Aperitivo",
+      "precio": "4500",
+      "tamanio": "950ml",
+      "imagen": "https://acdn.mitiendanube.com/stores/002/056/357/products/20221026_1512571-78bf3417f0aa1e3ea116711394776429-480-0.webp"
+    },
+    {
+      "marca": "Red Bull",
+      "producto": "Red Bull",
+      "categoria": "SinAlcohol",
+      "tamanio": "25ml x6",
+      "precio": "10200",
+      "imagen": "https://acdn.mitiendanube.com/stores/002/056/357/products/20230426_1454161-06f5eb4a79f5a876a416825386898430-480-0.webp",
+      "id": "7a4a"
+    },
+    {
+      "id": "cb1a",
+      "producto": "Sky Raspberry",
+      "marca": "Sky",
+      "categoria": "Vodka",
+      "precio": "7300",
+      "tamanio": "750ml",
+      "imagen": "https://acdn.mitiendanube.com/stores/002/056/357/products/20220527_185102-5e745c4a378743f65116536885889616-480-0.webp"
+    },
+    {
+      "marca": "Jack Daniels",
+      "producto": "Jack Daniels Honey",
+      "categoria": "Whisky",
+      "tamanio": "750ml",
+      "precio": "50000",
+      "imagen": "https://acdn.mitiendanube.com/stores/002/056/357/products/20220511_172810-0e254eda78f9f5691916523009822755-480-0.webp",
+      "id": "3294"
+    },
+    {
+      "id": "fb57",
+      "producto": "Red Label",
+      "marca": "Jonnie Walker",
+      "categoria": "Whisky",
+      "precio": "41500",
+      "tamanio": "1l",
+      "imagen": "https://acdn.mitiendanube.com/stores/002/056/357/products/20221227_1553241-2456f25d9a0b2a6af516733467244934-480-0.webp"
+    },
+    {
+      "id": "f6a4",
+      "producto": "Blue Label",
+      "marca": "Jonnie Walker",
+      "categoria": "Whisky",
+      "precio": "420500",
+      "tamanio": "750ml",
+      "imagen": "https://acdn.mitiendanube.com/stores/002/056/357/products/20220317_1626431-ec4d65c6af29154e0116514520426838-480-0.webp"
     }
   ]
 }

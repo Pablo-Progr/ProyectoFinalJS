@@ -169,8 +169,6 @@ try {
                     showConfirmButton: false 
                   });
             }
-
-
         }else{
             Swal.fire({
                 title: '¡Error!',
@@ -181,7 +179,6 @@ try {
                 showConfirmButton: false 
               });
         }
-
     }else{
         Swal.fire({
             title: '¡Error!',
