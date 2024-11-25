@@ -75,7 +75,7 @@ formularioRegistro.reset();
 // codigo para verificar que el email y el dni no este ya registrado
 
 try {
-    let respuesta = await axios.get ("http://localhost:3000/usuarios")
+    let respuesta = await axios.get ("http://localhost:3001/usuarios")
 
     usuarios=respuesta.data;
     emailEncontrado=false
@@ -117,7 +117,7 @@ try {
                     setTimeout( async () => {
                                             
                     try { 
-                        let response = await axios.post("http://localhost:3000/usuarios",{
+                        let response = await axios.post("http://localhost:3001/usuarios",{
                         
                             nombre: Nombre,
                             apellido: Apellido,
@@ -208,7 +208,7 @@ BotonInicioSesion.addEventListener ("click",async (e) => {
     if (EmailLogin&&ContraseñaLogin) {
         try {
 
-            let response = await axios.get("http://localhost:3000/usuarios");
+            let response = await axios.get("http://localhost:3001/usuarios");
 
             let usuarios=response.data;
 

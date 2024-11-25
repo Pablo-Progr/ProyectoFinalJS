@@ -24,9 +24,6 @@ const mostrarProductos = async () => {
 
 
 mostrarProductos();
-  
-
-
 // traigo el valor de la variable usuarioEncontrado del js del login
 //si el valor es true, me muestra bienvenido, si el valor es false,muestra el iniciar sesion
 // para index.html y productos.html
@@ -40,14 +37,9 @@ let Iniciar2 = document.getElementById("Iniciar2")
 
 
 if (usuarioEncontrado==="true") {
-
     nombreusuario=localStorage.getItem("usuarionombre")
-
     console.log("nombre:"+nombreusuario);
-
-
     Iniciar2.classList.add("d-none")
-    
     Iniciar.innerHTML+=`
 
        <ul class="navbar-nav mb-2 mb-lg-0">
@@ -77,16 +69,6 @@ if (usuarioEncontrado==="true") {
             localStorage.setItem("usuarioEncontrado","false")
             window.location.reload()
         },3500)
-
-
-
-
-
-
-        
-    
-    
-    
     })
     
 }else{
