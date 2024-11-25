@@ -20,13 +20,9 @@ let contraseñaAdmin=document.getElementById("contraseñaAdmin").value
           AdminEncontrado=true;
 
         }
-
-        
-
       })
 
       if (AdminEncontrado==true) {
-
         Swal.fire({
           title: "Inicio como administrador correcto",
           text: 'Aguarda un segundo, por favor',
@@ -37,9 +33,6 @@ let contraseñaAdmin=document.getElementById("contraseñaAdmin").value
        setTimeout(()=>{
         window.location.href ="admin.html"   
        },3000)
-
-
-        
       }else{
         Swal.fire({
           title: '¡Error!',
@@ -61,10 +54,7 @@ let contraseñaAdmin=document.getElementById("contraseñaAdmin").value
           showConfirmButton: false 
         });
       }
-
-      
     } catch (error) {
-
       console.error(error);
       Swal.fire({
         title: '¡Error!',
@@ -76,11 +66,7 @@ let contraseñaAdmin=document.getElementById("contraseñaAdmin").value
       });
     
     }
-  
-    
   }
-  
-
 )
 
 
