@@ -28,7 +28,9 @@ const agregarProducto = async () => {
         title: "Producto Agregado",
         text: "Producto cargado correctamente",
         icon: "success",
-        timer:1500
+        timer:1500,
+        timerProgressBar:true,
+        showConfirmButton: false 
       });
       setTimeout(async ()=> {
         let response = await axios.post("http://localhost:3001/productos", {

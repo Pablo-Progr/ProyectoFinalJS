@@ -109,7 +109,9 @@ try {
                         title: '¡Genial!',
                         text: 'Registro completado con éxito.',
                         icon: 'success',
-                        timer: 3000
+                        timer: 3000,
+                        timerProgressBar:true,
+                        showConfirmButton: false 
                       });
                       
 
@@ -234,7 +236,8 @@ BotonInicioSesion.addEventListener ("click",async (e) => {
                     text: 'Aguarda un segundo, por favor',
                     icon: 'success',
                     timer:3000,
-                    timerProgressBar:true
+                    timerProgressBar:true,
+                    showConfirmButton: false 
                  });
                setTimeout(()=> {
                 window.location.href ="productos.html";
