@@ -1,20 +1,5 @@
-// Función para agregar productos al carrito
-const agregarAlCarrito = (producto, categoria, precio) => {
-    
-    // Agregar la fila al carrito
-    document.getElementById("tablaCarrito").innerHTML += `
-        <tr>
-            <td>${producto}</td>
-            <td>${categoria}</td>
-            <td>$${precio}</td>
-        </tr>
-        `
-    ;
-};
-
 const mostrarProductos = async () => {
     try {
-  
       let response = await axios.get("http://localhost:3001/productos");
       response.data.map((producto) =>
           (document.getElementById("seccionProductos").innerHTML += `
@@ -47,19 +32,10 @@ const agregarCarrito = (id,marca, producto, precio, cantidad) => {
         alert("debe ingresar una cantidad")
     } else {
         const total = cantidad * precio;
-  
-        // Crear un objeto del producto
         const productoCarrito = { marca, producto, cantidad, precio, total };
-      
-        // Obtener el carrito existente del localStorage o inicializarlo vacío
         let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-      
-        // Agregar el nuevo producto al carrito
         carrito.push(productoCarrito);
-      
-        // Guardar el carrito actualizado en el localStorage
         localStorage.setItem('carrito', JSON.stringify(carrito));
-      
         alert('Producto agregado al carrito');  
     }
 
@@ -85,8 +61,8 @@ aperitivos.addEventListener("click", async (e)=>{
                         <h5 class="card-title">${producto.categoria} -  ${producto.producto}</h5>
                         <h5 class="card-text">$${producto.precio}</h5>
                         <div class="agregar-carrito">
-                            <input class="col-4" type="number" placeholder="0" style="height: 35px;">
-                            <button class="btn btn-success ">Agregar al carrito</button>
+                            <input class="col-4" type="number" id="cantidad${producto.id}" value="0" placeholder="0" style="height: 35px;">
+                            <button class="btn btn-success" onClick="agregarCarrito('${producto.id}','${producto.marca}','${producto.producto}','${producto.precio}')">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
@@ -94,12 +70,9 @@ aperitivos.addEventListener("click", async (e)=>{
             }
 
         })
-      
-    } catch (error) {
-
-        console.error("Error axios");
-        
-    }
+        } catch (error) {
+            console.error("Error axios");
+        }
     
 });
 
@@ -123,8 +96,8 @@ cervezas.addEventListener("click", async (e)=>{
                         <h5 class="card-title">${producto.categoria} -  ${producto.producto}</h5>
                         <h5 class="card-text">$${producto.precio}</h5>
                         <div class="agregar-carrito">
-                            <input class="col-4" type="number" placeholder="0" style="height: 35px;">
-                            <button class="btn btn-success ">Agregar al carrito</button>
+                            <input class="col-4" type="number" id="cantidad${producto.id}" value="0" placeholder="0" style="height: 35px;">
+                            <button class="btn btn-success" onClick="agregarCarrito('${producto.id}','${producto.marca}','${producto.producto}','${producto.precio}')">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
@@ -160,8 +133,8 @@ champage.addEventListener("click", async (e)=>{
                         <h5 class="card-title">${producto.categoria} -  ${producto.producto}</h5>
                         <h5 class="card-text">$${producto.precio}</h5>
                         <div class="agregar-carrito">
-                            <input class="col-4" type="number" placeholder="0" style="height: 35px;">
-                            <button class="btn btn-success ">Agregar al carrito</button>
+                            <input class="col-4" type="number" id="cantidad${producto.id}" value="0" placeholder="0" style="height: 35px;">
+                            <button class="btn btn-success" onClick="agregarCarrito('${producto.id}','${producto.marca}','${producto.producto}','${producto.precio}')">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
@@ -169,13 +142,9 @@ champage.addEventListener("click", async (e)=>{
             }
 
         })
-      
     } catch (error) {
-
         console.error("Error axios");
-        
     }
-    
 });
 
 let Ginebra=document.getElementById("Ginebra");
@@ -197,22 +166,17 @@ champage.addEventListener("click", async (e)=>{
                         <h5 class="card-title">${producto.categoria} -  ${producto.producto}</h5>
                         <h5 class="card-text">$${producto.precio}</h5>
                         <div class="agregar-carrito">
-                            <input class="col-4" type="number" placeholder="0" style="height: 35px;">
-                            <button class="btn btn-success ">Agregar al carrito</button>
+                            <input class="col-4" type="number" id="cantidad${producto.id}" value="0" placeholder="0" style="height: 35px;">
+                            <button class="btn btn-success" onClick="agregarCarrito('${producto.id}','${producto.marca}','${producto.producto}','${producto.precio}')">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
           `)         
             }
-
         })
-      
     } catch (error) {
-
         console.error("Error axios");
-        
     }
-    
 });
 
 let SinAlcohol=document.getElementById("SinAlcohol");
@@ -234,8 +198,8 @@ SinAlcohol.addEventListener("click", async (e)=>{
                         <h5 class="card-title">${producto.categoria} -  ${producto.producto}</h5>
                         <h5 class="card-text">$${producto.precio}</h5>
                         <div class="agregar-carrito">
-                            <input class="col-4" type="number" placeholder="0" style="height: 35px;">
-                            <button class="btn btn-success ">Agregar al carrito</button>
+                            <input class="col-4" type="number" id="cantidad${producto.id}" value="0" placeholder="0" style="height: 35px;">
+                            <button class="btn btn-success" onClick="agregarCarrito('${producto.id}','${producto.marca}','${producto.producto}','${producto.precio}')">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
@@ -245,11 +209,8 @@ SinAlcohol.addEventListener("click", async (e)=>{
         })
       
     } catch (error) {
-
         console.error("Error axios");
-        
     }
-    
 });
 
 let Vinos=document.getElementById("Vino");
@@ -271,8 +232,8 @@ Vinos.addEventListener("click", async (e)=>{
                         <h5 class="card-title">${producto.categoria} -  ${producto.producto}</h5>
                         <h5 class="card-text">$${producto.precio}</h5>
                         <div class="agregar-carrito">
-                            <input class="col-4" type="number" placeholder="0" style="height: 35px;">
-                            <button class="btn btn-success ">Agregar al carrito</button>
+                            <input class="col-4" type="number" id="cantidad${producto.id}" value="0" placeholder="0" style="height: 35px;">
+                            <button class="btn btn-success" onClick="agregarCarrito('${producto.id}','${producto.marca}','${producto.producto}','${producto.precio}')">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
@@ -308,20 +269,16 @@ Vodkas.addEventListener("click", async (e)=>{
                         <h5 class="card-title">${producto.categoria} -  ${producto.producto}</h5>
                         <h5 class="card-text">$${producto.precio}</h5>
                         <div class="agregar-carrito">
-                            <input class="col-4" type="number" placeholder="0" style="height: 35px;">
-                            <button class="btn btn-success ">Agregar al carrito</button>
+                            <input class="col-4" type="number" id="cantidad${producto.id}" value="0" placeholder="0" style="height: 35px;">
+                            <button class="btn btn-success" onClick="agregarCarrito('${producto.id}','${producto.marca}','${producto.producto}','${producto.precio}')">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
           `)         
             }
-
         })
-      
     } catch (error) {
-
         console.error("Error axios");
-        
     }
     
 });
@@ -345,8 +302,8 @@ Whiskys.addEventListener("click", async (e)=>{
                         <h5 class="card-title">${producto.categoria} -  ${producto.producto}</h5>
                         <h5 class="card-text">$${producto.precio}</h5>
                         <div class="agregar-carrito">
-                            <input class="col-4" type="number" placeholder="0" style="height: 35px;">
-                            <button class="btn btn-success ">Agregar al carrito</button>
+                            <input class="col-4" type="number" id="cantidad${producto.id}" value="0" placeholder="0" style="height: 35px;">
+                            <button class="btn btn-success" onClick="agregarCarrito('${producto.id}','${producto.marca}','${producto.producto}','${producto.precio}')">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
@@ -354,77 +311,22 @@ Whiskys.addEventListener("click", async (e)=>{
             }
 
         })
-      
     } catch (error) {
-
         console.error("Error axios");
-        
     }
-    
 });
 
 
 let MostrarProductos=document.getElementById("Productos");
 
-MostrarProductos.addEventListener("click", async (e)=>{
+MostrarProductos.addEventListener("click", ()=>{
 
-    try {
-  
-        let response = await axios.get("http://localhost:3001/productos");
-        response.data.map((producto) =>
-            (document.getElementById("seccionProductos").innerHTML += `
-              <div class="card card-bebida" style="width: 18rem">
-                  <img src="${producto.imagen}" class="card-img" alt="Imagen Campari" style="height: 340px;"/>
-                  <div class="card-body">
-                      <h5 class="card-title">${producto.categoria} -  ${producto.producto}</h5>
-                      <h5 class="card-text">$${producto.precio}</h5>
-                      <div class="agregar-carrito">
-                          <input class="col-4" type="number" placeholder="0" style="height: 35px;">
-                          <button class="btn btn-success ">Agregar al carrito</button>
-                      </div>
-                  </div>
-              </div>
-        `)
-        );
-      } catch (error) {
-        console.log(error)
-      }
+    mostrarProductos()
     
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// traigo el valor de la variable usuarioEncontrado del js del login
-//si el valor es true, me muestra bienvenido, si el valor es false,muestra el iniciar sesion
-// para index.html y productos.html
-
-usuarioEncontrado=localStorage.getItem("usuarioEncontrado")
+usuarioEncontrado = localStorage.getItem("usuarioEncontrado")
 
 console.log(usuarioEncontrado);
 
@@ -433,7 +335,7 @@ let Iniciar2 = document.getElementById("Iniciar2")
 
 
 if (usuarioEncontrado==="true") {
-    nombreusuario=localStorage.getItem("usuarionombre")
+    nombreusuario = localStorage.getItem("usuarionombre")
     console.log("nombre:"+nombreusuario);
     Iniciar2.classList.add("d-none")
     Iniciar.innerHTML+=`

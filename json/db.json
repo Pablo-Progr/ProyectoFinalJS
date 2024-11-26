@@ -37,6 +37,15 @@
       "dni": "31133333",
       "email": "phillipgraves01@gmail.com",
       "contraseña": "shadow01"
+    },
+    {
+      "id": "a134",
+      "nombre": "German",
+      "apellido": " Domínguez",
+      "fechaNacimiento": "1999-08-22",
+      "dni": "42525225",
+      "email": "dominguezpg.99@gmail.com",
+      "contraseña": "222"
     }
   ],
   "productos": [
