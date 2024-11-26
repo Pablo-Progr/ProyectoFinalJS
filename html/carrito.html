@@ -8,7 +8,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   
     <link rel="stylesheet" href="../css/style.css">
-  
     <script src="../js/carrito.js" defer></script>
     <script src="../js/productos.js" defer></script>
     <title>Carrito</title>
@@ -62,7 +61,6 @@
         <table class="table table-dark">
             <thead>
               <tr>
-                <th scope="col">ID</th>
                 <th scope="col">Producto</th>
                 <th scope="col">Marca</th>
                 <th scope="col">Cantidad</th>
@@ -71,14 +69,18 @@
               </tr>
             </thead>
             <tbody id="tablaCarrito">
-            
-           
 
             </tbody>
-            
+            <tfoot>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col">TOTAL</th>
+              <th scope="col" id="totalCompra"></th>
+            </tfoot>
+
           </table>
-          <button id="btnComprar" type="button" class="btn btn-custom" >Pasar a finalizar compra</button>    
-          
+          <button id="btnComprar" type="button" class="btn btn-custom" >Pasar a finalizar compra</button>
       </section>
      
     </main>

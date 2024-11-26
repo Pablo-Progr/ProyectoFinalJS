@@ -6,7 +6,7 @@ BtnLoginAdmin.addEventListener("click",async (e)=>{
 let usuarioAdmin=document.getElementById("usuarioAdmin").value
 let contraseñaAdmin=document.getElementById("contraseñaAdmin").value
 
-  let response=await axios.get("http://localhost:3000/usuarios")
+  let response=await axios.get("http://localhost:3001/usuarios")
 
   let usuarios=response.data;
   let AdminEncontrado=false;
@@ -28,7 +28,8 @@ let contraseñaAdmin=document.getElementById("contraseñaAdmin").value
           text: 'Aguarda un segundo, por favor',
           icon: 'success',
           timer:3000,
-          timerProgressBar:true
+          timerProgressBar:true,
+          showConfirmButton: false 
        });
        setTimeout(()=>{
         window.location.href ="admin.html"   
