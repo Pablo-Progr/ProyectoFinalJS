@@ -10,8 +10,8 @@ const mostrarProductos = async () => {
                     <h5 class="card-title">${producto.categoria} -  ${producto.producto}</h5>
                     <h5 class="card-text">$${producto.precio}</h5>
                     <div class="agregar-carrito">
-                        <input class="col-4" type="number" placeholder="0" style="height: 35px;">
-                        <button class="btn btn-success ">Agregar al carrito</button>
+                        <input class="col-4" type="number" id="cantidad${producto.id}" value="0" placeholder="0" style="height: 35px;">
+                        <button class="btn btn-success" onClick="agregarCarrito('${producto.id}','${producto.marca}','${producto.producto}','${producto.precio}')">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
@@ -23,6 +23,33 @@ const mostrarProductos = async () => {
   };
 
 mostrarProductos();
+
+const agregarCarrito = (id,marca, producto, precio, cantidad) => {
+    
+    cantidad = document.getElementById('cantidad'+id).value;
+
+    if (cantidad == 0 ) {
+        alert("debe ingresar una cantidad")
+    } else {
+        const total = cantidad * precio;
+  
+        // Crear un objeto del producto
+        const productoCarrito = { marca, producto, cantidad, precio, total };
+      
+        // Obtener el carrito existente del localStorage o inicializarlo vacío
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      
+        // Agregar el nuevo producto al carrito
+        carrito.push(productoCarrito);
+      
+        // Guardar el carrito actualizado en el localStorage
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+      
+        alert('Producto agregado al carrito');  
+    }
+
+  };
+
 
 let aperitivos=document.getElementById("Aperitivos");
 
