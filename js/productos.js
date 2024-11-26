@@ -1,3 +1,17 @@
+// Función para agregar productos al carrito
+const agregarAlCarrito = (producto, categoria, precio) => {
+    
+    // Agregar la fila al carrito
+    document.getElementById("tablaCarrito").innerHTML += `
+        <tr>
+            <td>${producto}</td>
+            <td>${categoria}</td>
+            <td>$${precio}</td>
+        </tr>
+        `
+    ;
+};
+
 const mostrarProductos = async () => {
     try {
   
@@ -10,8 +24,11 @@ const mostrarProductos = async () => {
                     <h5 class="card-title">${producto.categoria} -  ${producto.producto}</h5>
                     <h5 class="card-text">$${producto.precio}</h5>
                     <div class="agregar-carrito">
-                        <input class="col-4" type="number" placeholder="0" style="height: 35px;">
-                        <button class="btn btn-success ">Agregar al carrito</button>
+                           <button 
+                                class="btn btn-success" 
+                                onClick="agregarAlCarrito('${producto.producto}', '${producto.categoria}', ${producto.precio}, ${producto.id})">
+                                Agregar al carrito
+                            </button>
                     </div>
                 </div>
             </div>
@@ -20,7 +37,9 @@ const mostrarProductos = async () => {
     } catch (error) {
       console.log(error)
     }
+    
   };
+
 
 
 mostrarProductos();

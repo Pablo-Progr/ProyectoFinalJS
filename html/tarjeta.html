@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmar Compra</title>
     <link rel="icon" href="../img/logopng2.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/tarjeta.css">
@@ -61,23 +62,23 @@
                     <h2 class="h2Titulo">Ingrese un método de pago</h2>
                     <div class="form-group">
                         <label for="TarjetaRegistro" class="mb-1">Número de Tarjeta</label>
-                        <input type="number" class="form-control" id="TarjetaRegistro" placeholder="3456 6790 5432 3318">
+                        <input type="text" class="form-control" id="tarjetaRegistro" placeholder="3456 6790 5432 3318">
                     </div>
                     <div class="form-group">
                         <label for="Nombre" class="mb-1">Nombre del titular</label>
-                        <input type="text" class="form-control" id="NombreRegistro" placeholder="Juan Perez">
+                        <input type="text" class="form-control" id="nombreRegistro" placeholder="Juan Perez">
                     </div>
                     <div class="form-group">
                         <label for="vencimiento" class="mb-1">Vencimiento</label>
-                        <input type="number" class="form-control" id="vencimientoRegistro" placeholder="02/33">
+                        <input type="text" class="form-control" id="vencimientoRegistro" placeholder="02/33">
                     </div>
                     <div class="form-group">
                         <label for="codigoDeSeguridad" class="mb-1">Código de seguridad</label>
-                        <input type="number" class="form-control" id="codigoDeSeguridadRegistro" placeholder="777" maxlength="8">
+                        <input type="text" class="form-control" id="cvvRegistro" placeholder="777" maxlength="8">
                     </div>
                     <div class="form-group">
                         <label for="ProvinciaRegistro" class="mb-1">Provincia</label>
-                        <input type="text" class="form-control" id="ProvinciaRegistro" placeholder="Tucumán">
+                        <input type="text" class="form-control" id="provinciaRegistro" placeholder="Tucumán">
                     </div>
                     <div class="form-group">
                         <label for="passwordRegistro" class="mb-1">Ciudad</label>
@@ -85,27 +86,13 @@
                     </div>
                     <div class="form-group">
                         <label for="postalRegistro" class="mb-1">Código Postal</label>
-                        <input type="number" class="form-control" id="postalRegistro" placeholder="4146">
+                        <input type="text" class="form-control" id="postalRegistro" placeholder="4146">
                     </div>
                     
                 </form>
             </div>
         </div>
-        
-          <button id="btnTarjeta" type="submit" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#exampleModal">Finalizar Compra</button>
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">
-                 
-                    Gracias por su compra
-                    
-
-                </h1>
-            </div>
-          </div>
-        </div>
+          <button id="btnTarjeta" type="submit" class="btn btn-custom">Finalizar Compra</button>
     </main>
     <footer>
         <footer>

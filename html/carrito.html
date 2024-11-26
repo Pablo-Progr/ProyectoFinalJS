@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/style.css">
   
     <script src="../js/carrito.js" defer></script>
+    <script src="../js/productos.js" defer></script>
     <title>Carrito</title>
 </head>
 <body>
@@ -61,7 +62,7 @@
         <table class="table table-dark">
             <thead>
               <tr>
- 
+                <th scope="col">ID</th>
                 <th scope="col">Producto</th>
                 <th scope="col">Marca</th>
                 <th scope="col">Cantidad</th>
@@ -69,37 +70,10 @@
                 <th scope="col">Total</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-               
-                <td>Blue Label</td>
-                <td>Johnnie Walker</td>
-                <td>
-                  <input type="number" name="" id="btnCarrito">
-                </td>
-                <td>$0</td>
-                <td>$0</td>
-              </tr>
-              <tr>
-          
-                <td>Ejemplo</td>
-                <td>Ejemplo</td>
-                <td>
-                  <input type="number" name="" id="btnCarrito">
-                </td>
-                <td>$0</td>
-                <td>$0</td>
-              </tr>
-              <tr>
-     
-                <td>Ejemplo</td>
-                <td>Ejemplo</td>
-                <td>
-                  <input type="number" name="" id="btnCarrito">
-                </td>
-                <td>$0</td>
-                <td>$0</td>
-              </tr>
+            <tbody id="tablaCarrito">
+            
+           
+
             </tbody>
             
           </table>

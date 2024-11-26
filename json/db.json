@@ -28,9 +28,17 @@
       "dni": "40698625",
       "email": "leandro@gmail.com",
       "contraseña": "leandro123"
+    },
+    {
+      "id": "36be",
+      "nombre": "Phillip",
+      "apellido": "Graves",
+      "fechaNacimiento": "2006-06-25",
+      "dni": "31133333",
+      "email": "phillipgraves01@gmail.com",
+      "contraseña": "shadow01"
     }
   ],
-
   "productos": [
     {
       "marca": "Patagonia",
